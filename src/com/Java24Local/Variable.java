@@ -12,9 +12,6 @@ public class Variable {
 		long salary = 264_400_000;
 		boolean gameOver = false;
 		
-		
-		
-
 	}
 
 }
