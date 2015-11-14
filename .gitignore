@@ -42,6 +42,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+<<<<<<< HEAD
 # Eclipse files
 .project
 .classpath
+=======
+# Eclipse Files
+.classpath
+.project
+>>>>>>> origin/master

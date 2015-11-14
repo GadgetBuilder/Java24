@@ -15,8 +15,16 @@ public class PlanetWeight {
 		System.out.println(moon);
 		
 		System.out.print("Your weight on Jupiter is ");
-		double jupiter = weight * .378;
+		double jupiter = weight * 2.364;
 		System.out.println(jupiter);
+		
+		System.out.print("Your weight on Venus is ");
+		double venus = weight * .907;
+		System.out.println(venus);
+		
+		System.out.print("Your weight on Uranus is ");
+		double uranus = weight * .889;
+		System.out.println(uranus);
 		
 	}
 
