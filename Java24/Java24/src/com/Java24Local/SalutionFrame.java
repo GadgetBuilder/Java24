@@ -19,10 +19,9 @@ public class SalutionFrame extends JFrame {
 		} catch (Exception exc) {
 			//ignore error
 		}
-//		public static void main(String[] arguments) {
-		public static void main(String[] args) {
-			SalutionFrame frame = new SalutionFrame();
 		}
+			public static void main(String[] args) {
+			SalutionFrame frame = new SalutionFrame();	
 	}
 
 }
