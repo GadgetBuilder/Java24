@@ -12,6 +12,9 @@ public class VirusLab {
 			System.out.println("There are " +
 			Virus.getVirusCount()
 			+ " viruses.");
+			
+			System.out.println("The number of seconds is " +
+			Virus.getNewSeconds());
 		}
 
 	}
