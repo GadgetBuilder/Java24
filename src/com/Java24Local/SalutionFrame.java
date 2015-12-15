@@ -5,6 +5,9 @@ import javax.swing.*;
 public class SalutionFrame extends JFrame {
 	public SalutionFrame() {
 		super("Salution mondo!");
+		JLabel mainText = new JLabel("DA Salution mondo!", JLabel.CENTER);
+		add(mainText);
+		
 		setLookAndFeel();
 		setSize(350, 100);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
