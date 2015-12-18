@@ -4,12 +4,14 @@ import java.awt.*;
 import javax.swing.*;
  
 public class LottoMadness extends JFrame {
-
+	LottoEvent lotto = new LottoEvent(this);
+	
     // set up row 1
     JPanel row1 = new JPanel();
     ButtonGroup option = new ButtonGroup();
     JCheckBox quickpick = new JCheckBox("Quick Pick", false);
     JCheckBox personal = new JCheckBox("Personal", true);
+    
     // set up row 2
     JPanel row2 = new JPanel();
     JLabel numbersLabel = new JLabel("Your picks: ", JLabel.RIGHT);
@@ -35,14 +37,28 @@ public class LottoMadness extends JFrame {
     JTextField drawings = new JTextField("0");
     JLabel yearsLabel = new JLabel("Years: ", JLabel.RIGHT);
     JTextField years = new JTextField();
+    // set up row 5
+    JPanel row5 = new JPanel();
+    JLabel speedLabel = new JLabel("Select Speed: ", JLabel.CENTER);
+    JTextField speed = new JTextField("100");
+    
  
     public LottoMadness() {
         super("Lotto Madness");
+           
          
-        setSize(550, 400);
+        setSize(550, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        GridLayout layout = new GridLayout(5, 1, 10, 10);
+        GridLayout layout = new GridLayout(6, 1, 10, 10);
         setLayout(layout);
+        
+      //Add listeners
+        quickpick.addItemListener(lotto);
+        personal.addItemListener(lotto);
+        stop.addActionListener(lotto);
+        play.addActionListener(lotto);
+        reset.addActionListener(lotto);
+        
         
         FlowLayout layout1 = new FlowLayout(FlowLayout.CENTER,
             10, 10);
@@ -98,6 +114,12 @@ public class LottoMadness extends JFrame {
         years.setEditable(false);
         row4.add(years);
         add(row4);
+        
+        GridLayout layout5 = new GridLayout(2, 7, 10, 10);
+        row5.setLayout(layout5);
+        row5.add(speedLabel);
+        row5.add(speed);
+        add(row5);
          
         setVisible(true);
     }
