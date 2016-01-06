@@ -136,12 +136,13 @@ public class LottoEvent implements ItemListener, ActionListener,
                     gui.play.setEnabled(true);
                     playing = null;
             }
-            try {
-//                Thread.sleep(100);
-                Thread.sleep(Integer.parseInt(gui.speed.getText()));
-            } catch (InterruptedException e) {
-                // do nothing
-            }
+            Sleep.pause(500);
+//            try {
+////                Thread.sleep(100);
+//                Thread.sleep(Integer.parseInt(gui.speed.getText()));
+//            } catch (InterruptedException e) {
+//                // do nothing
+//            }
         }
     }
 }
