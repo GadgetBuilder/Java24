@@ -19,7 +19,7 @@ public class PieFrameWArgs extends JFrame {
     public PieFrameWArgs(String[] args) {
         super("Pie Graph with Args");
         setLookAndFeel();
-        setSize(320, 290);
+        setSize(420, 390);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
  
@@ -36,6 +36,7 @@ public class PieFrameWArgs extends JFrame {
         pie.addSlice(purpleRain, 143);
         pie.addSlice(freckle, 127);
         add(pie);
+        System.out.println("Arg 0 is " + args[0]);
     }
    
     private void setLookAndFeel() {
@@ -50,5 +51,7 @@ public class PieFrameWArgs extends JFrame {
  
     public static void main(String[] args) {
         PieFrameWArgs pf = new PieFrameWArgs(args);
+        System.out.println("Arg 0 is " + args[0]);
+        
     }
 }
